@@ -2,11 +2,14 @@
 <html>
 <head>
 
+	<link  href="{{ url_for('static', filename='font.css') }} ">
+
 <meta  charset="UTF -8" />
 	<h1>Feudal Vengeance</h1>
 	<h2>A Medieval Revenge Adventure</h2>
 </head>
 <body>
+	<img src= "{{ url_for('static', filename = 'titlePic.jpg') }}"
 	<ul class="menuOptions">
   <li class="menuClick"><a href="charClassChoice.html">Start Game</a></li>
 
