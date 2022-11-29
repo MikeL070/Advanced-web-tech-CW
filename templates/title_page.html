@@ -2,43 +2,30 @@
 <html>
 <head>
 
-	<link  href="{{ url_for('static', filename='css/font.css') }} ">
-
+	<link  href="{{ url_for('static', filename='css/menu.css') }} " rel="stylesheet" /:>
+	<link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/font/font.css')}}"/>
 <meta  charset="UTF -8" />
 	<h1>Feudal Vengeance</h1>
 	<h2>A Medieval Revenge Adventure</h2>
 </head>
 <body>
-	<img src= "{{ url_for('static', filename = 'img/titlePic.jpg') }}"
+
 	<ul class="menuOptions">
   <li class="menuClick"><a href="charClassChoice.html">Start Game</a></li>
 
 </body>
 <style>
-  
-  a{color: red;text-shadow: 1px 1px black}
+body{
+        background-image: url({{ url_for ('static', filename = 'img/titlePic.jpg') }});
+}
 
-  h1{font-family: 'MedievalSharp-Book'; font-size: 80px; text-align: center; color:  #ff0000;text-decoration: underline; text-shadow: 3px 3px black}
-  h2{font-family: 'MedievalSharp-Book'; font-size: 35px; text-align: center; color:  black;text-decoration: underline; text-shadow: 2px 2px black}
-  .menuOptions
-  {
-    font-family: 'MedievalSharp-Book';
-    font-size: 30px;
-    text-align: center;
-    color: red;
-
-    list-style: none;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-
-  }
-  .menuClick
-  {
-    padding: 5px;
-    width: 300px;
-    height: 100px;
-    margin-top: 300px;
-  }
+@font-face {
+	  font-family: 'MedievalSharp-Book';
+	  src: {{ url_for('static', filename='font/MedievalSharp-Book.woff') }};
+      url('MedievalSharp-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  color: red
+}
 </style>
 </html>

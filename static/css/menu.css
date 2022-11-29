@@ -1,9 +1,30 @@
-@font-face
+body{
+	background-color: #4b4b4b;
+	background-repeat: no-repeat;
+	background-position:top;
+	background-image: url({{ url_for ('static', filename = 'img/titlePic.jpg') }});
+}
+a{color: red;text-shadow: 1px 1px black}
+
+h1{font-family: 'MedievalSharp-Book'; font-size: 80px; text-align: center; color:  #ff0000;text-decoration: underline; text-shadow: 3px 3px black}
+h2{font-family: 'MedievalSharp-Book'; font-size: 35px; text-align: center; color:  black;text-decoration: underline; text-shadow: 2px 2px black}
+.menuOptions
 {
   font-family: 'MedievalSharp-Book';
-  src:url('MedievalSharp-Book.tff')format('truetype'),
-      url('MedievalSharp-Book.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-size: 30px;
+  text-align: center;
   color: red;
+
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+}
+.menuClick
+{
+  padding: 5px;
+  width: 300px;
+  height: 100px;
+  margin-top: 300px;
 }
