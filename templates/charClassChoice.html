@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="font.css" type="text/css">
+  <link href="{{ url_for('static', filename='css/charClassChoice.css') }} " rel="stylesheet" /:>
   <link rel="stylesheet" href="charClassChoice.css" type="text/css">
   <script src="cw.js"></script>
 <meta  charset="UTF -8"/>
@@ -12,19 +12,19 @@
 <body>
   <div class="charChoices">
     <div class="scribeChoice">
-      <p><a href="introStory.html" id="charPics" onclick="storeScribe();"> <img src="scribeChar.jpg" width=162, height=346 /></a></p>
+	    <p><a href="introStory.html" id="charPics" onclick="storeScribe();"> <img src="{{ url_for('static', filename='img/scribeChar.jpg') }}" width=162, height=346 /></a></p>
       <a href="introStory.html" id="scribeTitle"onclick="storeScribe();">The Scribe</a>
       <p id="scribeText">A character that relies on intelligence and wit.</p>
     </div>
 
     <div class="knightChoice">
-      <a href="introStory.html" id="charPics" onclick="storeKnight();"> <img src="knightChar.jpg" width=162, height=346 /></a>
+      <a href="introStory.html" id="charPics" onclick="storeKnight();"> <img src="{{ url_for('static', filename='img/knightChar.jpg') }}" width=162, height=346 /></a>
       <p><a href="introStory.html" id="knightTitle" onclick="storeKnight();">The Knight</a></p>
       <p id="scribeText">A character that relies on his chivalry and skill.</p>
     </div>
 
     <div class="bruteChoice">
-      <a href="introStory.html" id="charPics" onclick="storeBrute();"> <img src="bruteChar.jpg" width=162, height=346 /></a>
+	    <a href="introStory.html" id="charPics" onclick="storeBrute();"> <img src="{{ url_for('static', filename='img/bruteChar.jpg') }}" width=162, height=346 /></a>
       <p><a href="introStory.html" id="bruteTitle" onclick="storeBrute();">The Brute</a></p>
       <p id="scribeText">A character that relies on strength and force.</p>
     </div>
