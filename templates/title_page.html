@@ -3,7 +3,7 @@
 <head>
 
 	<link  href="{{ url_for('static', filename='css/menu.css') }} " rel="stylesheet" /:>
-	<link  href="{{url_for('static', filename='css/font.css')}}"/>
+
 <meta  charset="UTF -8" />
 	<h1>Feudal Vengeance</h1>
 	<h2>A Medieval Revenge Adventure</h2>
@@ -15,15 +15,28 @@
 
 </body>
 <style>
-
-body{
-        background-image: url({{ url_for ('static', filename = 'img/titlePic.jpg') }});
-
-	h1{
-		font-family: 'MedievalSharp-Book';
+@font-face
+{
+  font-family: MedievalSharp;
+  src:url("{{ url_for('static', filename='MedievalSharp-Book.woff')}}");
   font-weight: normal;
   font-style: normal;
   color: red
+}
+body{
+        background-image: url({{ url_for ('static', filename = 'img/titlePic.jpg') }});
+        h1{
+  font-family: MedievalSharp;
+  text-align: center;
+  font-weight: normal;
+  font-style: normal;
+  color: red
+
+}
+
+}
+h2{
+font-family:MedievalSharp;
 }
 }
 </style>

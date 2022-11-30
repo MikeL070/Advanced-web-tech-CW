@@ -4,6 +4,26 @@
   <link href="{{ url_for('static', filename='css/charClassChoice.css') }} " rel="stylesheet" /:>
   <link rel="stylesheet" href="charClassChoice.css" type="text/css">
   <script src="cw.js"></script>
+<style>
+@font-face
+{
+  font-family: MedievalSharp;
+  src:url("{{ url_for('static', filename='MedievalSharp-Book.woff')}}");
+  font-weight: normal;
+  font-style: normal;
+ }
+head{
+	        font-family: MedievalSharp;
+        font-weight: normal;
+        font-style: normal;
+}
+
+body{
+	font-family:MedievalSharp;
+	font-weight: normal;
+	font-style: normal;
+}
+</style>
 <meta  charset="UTF -8"/>
 <h2>Choose Your Class<h2>
 <h3>Select a character class that reflect your play style. Your class will
@@ -12,20 +32,20 @@
 <body>
   <div class="charChoices">
     <div class="scribeChoice">
-	    <p><a href="introStory.html" id="charPics" onclick="storeScribe();"> <img src="{{ url_for('static', filename='img/scribeChar.jpg') }}" width=162, height=346 /></a></p>
-      <a href="introStory.html" id="scribeTitle"onclick="storeScribe();">The Scribe</a>
+	    <p><a href="/storyIntro/" id="charPics" onclick="storeScribe();"> <img src="{{ url_for('static', filename='img/scribeChar.jpg') }}" width=162, height=346 /></a></p>
+      <a href="/storyIntro/" id="scribeTitle"onclick="storeScribe();">The Scribe</a>
       <p id="scribeText">A character that relies on intelligence and wit.</p>
     </div>
 
     <div class="knightChoice">
-      <a href="introStory.html" id="charPics" onclick="storeKnight();"> <img src="{{ url_for('static', filename='img/knightChar.jpg') }}" width=162, height=346 /></a>
-      <p><a href="introStory.html" id="knightTitle" onclick="storeKnight();">The Knight</a></p>
+      <a href="/storyIntro/" id="charPics" onclick="storeKnight();"> <img src="{{ url_for('static', filename='img/knightChar.jpg') }}" width=162, height=346 /></a>
+      <p><a href="/storyIntro/" id="knightTitle" onclick="storeKnight();">The Knight</a></p>
       <p id="scribeText">A character that relies on his chivalry and skill.</p>
     </div>
 
     <div class="bruteChoice">
-	    <a href="introStory.html" id="charPics" onclick="storeBrute();"> <img src="{{ url_for('static', filename='img/bruteChar.jpg') }}" width=162, height=346 /></a>
-      <p><a href="introStory.html" id="bruteTitle" onclick="storeBrute();">The Brute</a></p>
+	    <a href="/storyIntro/" id="charPics" onclick="storeBrute();"> <img src="{{ url_for('static', filename='img/bruteChar.jpg') }}" width=162, height=346 /></a>
+      <p><a href="/storyIntro/" id="bruteTitle" onclick="storeBrute();">The Brute</a></p>
       <p id="scribeText">A character that relies on strength and force.</p>
     </div>
 
@@ -33,10 +53,10 @@
 </body>
 
 <script>
-	sessionStorage.setItem('silver', Number(100));
-	sessionStorage.setItem('armour', 'no');
-	sessionStorage.setItem('training', 'no');
-	sessionStorage.setItem('weapon', 'no');
+	document.cookie="silver=1000";
+	document.cookie='armour=no';
+	document.cookie='training=no';
+	document.cookie='weapon=no';
 
 function storeScribe(){
   sessionStorage.setItem('name', 'scribe');

@@ -1,3 +1,11 @@
+@font-face
+{
+  font-family: MedievalSharp;
+  src:url("{{ url_for('static', filename='MedievalSharp-Book.woff')}}");
+  font-weight: normal;
+  font-style: normal;
+  color: red
+}
 body{
 	background-color: #4b4b4b;
 	background-repeat: no-repeat;
@@ -6,11 +14,11 @@ body{
 }
 a{color: red;text-shadow: 1px 1px black}
 
-h1{font-family: 'MedievalSharp-Book'; font-size: 80px; text-align: center; color:  #ff0000;text-decoration: underline; text-shadow: 3px 3px black}
-h2{font-family: 'MedievalSharp-Book'; font-size: 35px; text-align: center; color:  black;text-decoration: underline; text-shadow: 2px 2px black}
+h1{font-family: MedievalSharp; font-size: 80px; text-align: center; color:  #ff0000;text-decoration: underline; text-shadow: 3px 3px black}
+h2{font-family: MedievalSharp; font-size: 35px; text-align: center; color:  black;text-decoration: underline; text-shadow: 2px 2px black}
 .menuOptions
 {
-  font-family: 'MedievalSharp-Book';
+  font-family: MedievalSharp;
   font-size: 30px;
   text-align: center;
   color: red;
@@ -23,6 +31,7 @@ h2{font-family: 'MedievalSharp-Book'; font-size: 35px; text-align: center; color
 }
 .menuClick
 {
+font-family: MedievalSharp;	
   padding: 5px;
   width: 300px;
   height: 100px;
