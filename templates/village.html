@@ -1,5 +1,24 @@
 <!DOCTYPE  html>
 <html>
+<style>
+@font-face
+{
+  font-family: MedievalSharp;
+  src:url("{{ url_for('static', filename='MedievalSharp-Book.woff')}}");
+  font-weight: normal;
+  font-style: normal;
+  }
+h2{
+	font-family: MedievalSharp;
+}
+	body{
+		font-family: MedievalSharp;
+	}
+	.optionsCont{
+		font-family: MedievalSharp;
+	}
+</style>
+
 <head>
   <link rel="stylesheet" href="font.css" type="text/css">
   <link  href="{{ url_for('static', filename='css/genericPage.css') }}"rel="stylesheet"/>
@@ -30,10 +49,10 @@
 			</div>
 		
 		<ul class="optionsCont">
-		<li><a href="blacksmith.html">Go to the blacksmith.</a></li>
-		<li><a href="knights.html">Inquire with the knights.</a></li>
-		<li><a href="tavern.html">Visit the tavern.</a></li>
-		<li><a id = "knowLocation" href="forestSearch.html" id="link">Go to the forest and try to find the bandit camp.</a></li>
+		<li><a href="/blacksmith/">Go to the blacksmith.</a></li>
+		<li><a href="/knights/">Inquire with the knights.</a></li>
+		<li><a href="/tavern/">Visit the tavern.</a></li>
+		<li><a id = "knowLocation" href="/forestSearch/" id="link">Go to the forest and try to find the bandit camp.</a></li>
 	</div> 
     <script>
 	var knowledge = sessionStorage.getItem ('knowledge');

@@ -1,11 +1,9 @@
-
 body
   {
     background-color: #4b4b4b;
   }
 h2
   {
-    font-family: 'MedievalSharp-Book';
     font-size: 35px;
     text-align: center;
     background-image:;
@@ -47,7 +45,6 @@ h2
   color: white ;
   font-weight: bold;
   text-align: center;
-  font-family: 'MedievalSharp-Book';
   font-size: 22px;  
   margin: auto;
   align-items: center;
@@ -56,10 +53,9 @@ h2
  
 .optionsCont
   {
-    
+    font-family: MedievalSharp;
     padding: 10px;
     margin:10px;
-    font-family: 'MedievalSharp-Book';
     font-size: 25px;
     display: flex;
     flex-flow: column;
@@ -75,3 +71,9 @@ h2
 {
     font-style: italic;	
 }
+@font-face
+{
+  font-family: MedievalSharp;
+  src:url("{{ url_for('static', filename='MedievalSharp-Book.woff')}}");
+  font-weight: normal;
+  font-style: normal;
