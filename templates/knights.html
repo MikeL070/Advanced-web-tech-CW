@@ -10,16 +10,18 @@
 }
 head{
 	font-family: MedievalSharp;
+}
 body{
 	font-family: MedievalSharp;
 }
+
 </style>
 <head>
 	<link rel="stylesheet" href="font.css" type="text/css">
 	<link  href="{{ url_for('static', filename='css/genericPage.css') }}"rel="stylesheet"/>
 	<meta  charset="UTF -8" />
 	<script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
-	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+	<script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/pageStyling.js') }}"></script>
 	<script src="silverHpFunctions.js"></script>
 
   <h2 id="locationTitle">Travelling Knights</h2>
@@ -28,9 +30,8 @@ body{
 <body>
 
 	<div class="storyBox">
-		<img id="picture"img src="knightCamp.jpg"></img>
-
-			<div class="storyText">
+<img id="picture"img src={{url_for('static', filename='img/knightCamp.jpg')}}></img>
+		<div class="storyText">
 				<p>
 					There are some knights scattered around their makeshift camp. 
 					Some are well armed and armoured and look formidable warriors. 
