@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href="{{ url_for('static', filename='css/charClassChoice.css') }} " rel="stylesheet" /:>
+  <link href="{{ url_for('static', filename='css/charClassChoice.css') }} " rel="stylesheet" />
   <link rel="stylesheet" href="charClassChoice.css" type="text/css">
   <script src="cw.js"></script>
 <style>
@@ -53,6 +53,10 @@ body{
 </body>
 
 <script>
+		sessionStorage.setItem('silver', Number(100));
+	sessionStorage.setItem('armour', 'no');
+	sessionStorage.setItem('training', 'no');
+	sessionStorage.setItem('weapon', 'no');
 	document.cookie="silver=1000";
 	document.cookie='armour=no';
 	document.cookie='training=no';
@@ -62,15 +66,26 @@ function storeScribe(){
   sessionStorage.setItem('name', 'scribe');
   sessionStorage.setItem('hitPoints', 30);
   sessionStorage.setItem('knowledge', 'yes');
+  document.cookie='name=scribe';
+  document.cookie='hitPoints=30';
+  document.cookie='knowledge=yes';
 }
 function storeKnight(){
-  sessionStorage.setItem('name', 'knight');
+	  sessionStorage.setItem('name', 'knight');
   sessionStorage.setItem('hitPoints', Number(50));
  sessionStorage.setItem('knowledge', 'no');
+  document.cookie='name=knight';
+  document.cookie='hitpoints=50;
+  document.cookie='knowledge=no';
+
 }
 function storeBrute(){
-  sessionStorage.setItem('name', 'brute');
+	sessionStorage.setItem('name', 'brute');
   sessionStorage.setItem('hitPoints', Number(50));
   sessionStorage.setItem('knowledge', 'no');
+  document.cookie='name=brute';
+  document.cookie='hitpoints=50;
+  document.cookie='knowledge=no';
+
 }
 </script>

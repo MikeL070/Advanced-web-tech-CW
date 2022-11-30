@@ -1,12 +1,44 @@
 <!DOCTYPE  html>
 <html>
 <head>
-  <link rel="stylesheet" href="font.css" type="text/css">
-  <link rel="stylesheet" href="introStory.css">
+	<link  href="{{ url_for('static', filename='css/introStory.css') }}"rel="stylesheet"/>
   <meta  charset="UTF -8" />
   <script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
-  <script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+	<script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/pageStyling.js') }}"></script>
+<style>
+@font-face
+{
+  font-family: MedievalSharp;
+  src:url("{{ url_for('static', filename='MedievalSharp-Book.woff')}}");
+  font-weight: normal;
+  font-style: normal;
+}
+	head{
 
+                font-family: MedievalSharp;
+                font-weight: normal;
+        font-style: normal;
+}
+
+	body{
+		font-family: MedievalSharp;
+		font-weight: normal;
+        font-style: normal;
+}
+
+	p{
+		font-family: MedievalSharp;
+                font-weight: normal;
+        font-style: normal;
+	}
+.storyBox
+	{
+	background-image:url({{url_for('static', filename='img/burnedFarm.jpg')}});
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+</style>
 
   <h2 id="locationTitle">Tragedy</h2>
 
@@ -14,7 +46,7 @@
 <body>
 
 	<div class="storyBox">
-						
+		
 		<p class="storyText">
 			You stand in the ashes of your farmhouse. 
 			After a morning of toil in the fields you arrive home to find your home burned to the ground and your father gently swinging from a nearby tree, a rope around his neck. A small sign hung around his neck reading “CHEAT”.  Your wife lies nearby on the ground, motionless and bloody, a wide wet gash on her neck, slowly oozing blood, her still open eyes staring lifelessly at the sky.

@@ -1,12 +1,10 @@
-
-
 body
   {
     background-color: #4b4b4b;
   }
 h2
   {
-    font-family: 'MedievalSharp-Book';
+    
     font-size: 35px;
     text-align: center;
     background-image:;
@@ -27,8 +25,8 @@ h2
     width: 800px;
     border-style: groove;
 	
-	background-image:url("burnedFarm.jpg");
-	background-size: 100% 100%;
+
+       	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	
 	
@@ -42,7 +40,7 @@ h2
   color: white ;
   font-weight: bold;
   text-align: center;
-  font-family: 'MedievalSharp-Book';
+  font-family: MedievalSharp;
   font-size: 26px;
   
   
@@ -52,7 +50,7 @@ h2
     align-items: left;
     padding: 10px;
     margin:10px;
-    font-family: 'MedievalSharp-Book';
+    font-family: MedievalSharp;
     font-size: 25px;
     display: flex;
     flex-flow: column;
