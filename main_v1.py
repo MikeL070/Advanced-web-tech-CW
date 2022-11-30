@@ -13,5 +13,23 @@ def charChoice():
 def storyIntro():
     return render_template('introStory.html')
 
+@app.route('/village/')
+def village():
+    return render_template('village.html')
+
+@app.route('/knights/')
+def knights():
+    return render_template('knights.html')
+
+@app.route('/tavern/')
+def tavern():
+    return render_template('tavern.html')
+
+@app.route('/blacksmith/')
+def blacksmith():
+    return render_template('blacksmith.html')
+
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
