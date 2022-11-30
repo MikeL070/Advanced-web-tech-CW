@@ -1,5 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, session
 app = Flask(__name__, static_url_path = "", static_folder = "static")
+app.secret_key = 'thisisasecret'
 
 @app.route('/')
 def title_page():
@@ -11,6 +12,39 @@ def charChoice():
 
 @app.route('/storyIntro/')
 def storyIntro():
+    return render_template('introStory.html')
+
+@app.route('/storyIntroKnight/')
+def storyIntroKnight():
+    session['class'] = 'knight'
+    session['armour'] = 'no'
+    session['training'] = 'no'
+    session['weapopn'] = 'no'
+    session['hitpoints'] = '50'
+    session['knowledge'] = 'no'
+    session['silver'] = '100'
+    return render_template('introStory.html') 
+
+@app.route('/storyIntroScribe/')
+def storyIntroScribe():
+    session['class'] = 'scribe'
+    session['armour'] = 'no'
+    session['training'] = 'no'
+    session['weapopn'] = 'no'
+    session['hitpoints'] = '30'
+    session['knowledge'] = 'no'
+    session['silver'] = '100'
+    return render_template('introStory.html')
+
+@app.route('/storyIntroBrute/')
+def storyIntroBrute():
+    session['class'] = 'brute'
+    session['armour'] = 'no'
+    session['training'] = 'no'
+    session['weapopn'] = 'no'
+    session['hitpoints'] = '50'
+    session['knowledge'] = 'no'
+    session['silver'] = '100'
     return render_template('introStory.html')
 
 @app.route('/village/')

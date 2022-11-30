@@ -4,6 +4,8 @@
   <link href="{{ url_for('static', filename='css/charClassChoice.css') }} " rel="stylesheet" />
   <link rel="stylesheet" href="charClassChoice.css" type="text/css">
   <script src="cw.js"></script>
+	<script> sessionStorage.setItem('test', 'HI');
+	</script>
 <style>
 @font-face
 {
@@ -32,14 +34,19 @@ body{
 <body>
   <div class="charChoices">
     <div class="scribeChoice">
-	    <p><a href="/storyIntro/" id="charPics" onclick="storeScribe();"> <img src="{{ url_for('static', filename='img/scribeChar.jpg') }}" width=162, height=346 /></a></p>
+	<p> <a href="/storyIntro/" id="charPicsS" onclick="sessionStorage.setItem('hi', 'hi');"> <img src="{{ url_for('static', filename='img/scribeChar.jpg') }}" width=162, height=346 /></a></p>
       <a href="/storyIntro/" id="scribeTitle"onclick="storeScribe();">The Scribe</a>
       <p id="scribeText">A character that relies on intelligence and wit.</p>
+	<script>
+	 var sPic = document.getElementById('charPicsS');
+sPic.addEventListener("click", sessionStorage.setItem('hello', 'hi);
+
+	</script>
     </div>
 
     <div class="knightChoice">
-      <a href="/storyIntro/" id="charPics" onclick="storeKnight();"> <img src="{{ url_for('static', filename='img/knightChar.jpg') }}" width=162, height=346 /></a>
-      <p><a href="/storyIntro/" id="knightTitle" onclick="storeKnight();">The Knight</a></p>
+      <a href="/storyIntroKnight/" id="charPics" onclick="storeKnight();"> <img src="{{ url_for('static', filename='img/knightChar.jpg') }}" width=162, height=346 /></a>
+      <p><a href="/storyIntroKnight/" id="knightTitle" onclick="storeKnight();">The Knight</a></p>
       <p id="scribeText">A character that relies on his chivalry and skill.</p>
     </div>
 
@@ -53,22 +60,23 @@ body{
 </body>
 
 <script>
-		sessionStorage.setItem('silver', Number(100));
-	sessionStorage.setItem('armour', 'no');
-	sessionStorage.setItem('training', 'no');
-	sessionStorage.setItem('weapon', 'no');
-	document.cookie="silver=1000";
-	document.cookie='armour=no';
-	document.cookie='training=no';
-	document.cookie='weapon=no';
+	sessionStorage.setItem('test', 'HI');
+	var sPic = document.getElementById('charPicsS');
+sPic.addEventListener("click", storeScribe());
+	var sWord = document.getElementById('charPicsS');
+	sWord.addEventListener('click', storeScribe);
+
+function mouseHoverFunction(){
+	document.getElementById('scribeTitle').innerHTML += "MOUSE HOVER!!!<br>";
 
 function storeScribe(){
+localStorage.setItem('armour', 'no');
+        sessionStorage.setItem('training', 'no');
+        sessionStorage.setItem('weapon', 'no');
   sessionStorage.setItem('name', 'scribe');
   sessionStorage.setItem('hitPoints', 30);
   sessionStorage.setItem('knowledge', 'yes');
-  document.cookie='name=scribe';
-  document.cookie='hitPoints=30';
-  document.cookie='knowledge=yes';
+ 
 }
 function storeKnight(){
 	  sessionStorage.setItem('name', 'knight');
@@ -89,3 +97,4 @@ function storeBrute(){
 
 }
 </script>
+</html>
