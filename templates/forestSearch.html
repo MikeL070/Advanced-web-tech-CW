@@ -1,18 +1,18 @@
 <!DOCTYPE  html>
 <html>
 <head>
-	<link rel="stylesheet" href="font.css" type="text/css">
-	<link rel="stylesheet" href="genericPage.css">
+	<link rel="stylesheet" href={{ url_for('static', filename='css/font.css') }}" type="text/css">
+	<link  href="{{ url_for('static', filename='css/genericPage.css') }}"rel="stylesheet"/>
 	<meta  charset="UTF -8" />
-	<script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
-	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+	<script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/jQuery.js') }}"></script>
+	<script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/pageStyling.js') }}"></script>
 
 	<h2 id="locationTitle">Searching the forrest</h2>
 </head>
 <body>
 
 	<div class="storyBox">
-		<img id="picture"img src="forrest.jpg"></img>
+		<img id="picture"img src={{url_for('static', filename='img/forrest.jpg')}}></img>
 
 		<div class="storyText">
 			<p style="font-size:20px;">
@@ -27,9 +27,9 @@
 		</div>
 		
 		<ul class="optionsCont">
-			<li><a href="bandit1NoKnow.html">Emerge from the trees and face him.</a></li>
-			<li><a href="village.html">Return to the village.</a></li>	
-			<li><a href="runAway.html">Run away.</a></li>
+			<li><a href="/bandit1NoKnow/">Emerge from the trees and face him.</a></li>
+			<li><a href="/village/">Return to the village.</a></li>	
+			<li><a href="/runAway/">Run away.</a></li>
 	</div>			
 	
 </body>
