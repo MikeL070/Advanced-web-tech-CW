@@ -1,17 +1,17 @@
 <!DOCTYPE  html>
 <html>
 <head>
-	<link rel="stylesheet" href="font.css" type="text/css">
-	<link rel="stylesheet" href="genericPage.css">
-	<script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
-	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
-	<script language="JavaScript" type="text/javascript" src="silverHpFunctions.js"></script>
+	<link rel="stylesheet" href={{ url_for('static', filename='css/font.css') }}" type="text/css">
+	<link  href="{{ url_for('static', filename='css/genericPage.css') }}"rel="stylesheet"/>
+	<script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/jQuery.js') }}"></script>
+	<script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/pageStyling.js') }}"></script>
+	<script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/silverHpFunctions.js.js') }}"></script>
 
 	<h2 id="locationTitle">Face the Bandits</h2>
 </head>
 <body>
 	<div class="storyBox">
-			<img id="picture"img src="twoBandits.jpg"></img>
+			<img id="picture"img src={{url_for('static', filename='img/twoBandits.jpg')}}></img>
 
 			<div style="font-size:26px;" class="storyText">
 				<p>
@@ -21,8 +21,8 @@
 				</p>
 			</div>
 			<ul class="optionsCont">
-				<li><a href="finalBoss1.html">Face the bandit Leader</a></li>
-				<li><a href="runAway.html">Run away</a></li>
+				<li><a href="/finalBoss1/">Face the bandit Leader</a></li>
+				<li><a href="/runAway/">Run away</a></li>
 				
 				
 	</div>	
@@ -41,7 +41,7 @@
 		
 		if(name=='scribe')
 		{
-			document.getElementById('knowLocation').href="bandit1.html";
+			document.getElementById('knowLocation').href="/bandit1/";
 			
 		}	
 
