@@ -63,47 +63,47 @@ def tavern():
 def blacksmith():
     return render_template('blacksmith.html')
 
-@app.route('forrestSearch')
+@app.route('/forrestSearch/')
 def forrestSearch():
     return render_template('forrestSearch.html')
 
-@app.route('bandit1NoKnow')
+@app.route('/bandit1NoKnow/')
 def bandit1NoKnow():
     return render_template('bandit1NoKnow.html')
 
-@app.route('runAway')
+@app.route('/runAway/')
 def runAway():
     return render_template('runAway.html')
 
-@app.route('bandit1')
+@app.route('/bandit1/')
 def bandit1():
     return render_template('bandit1.html')
 
-@app.route('bandit1Conclusion')
+@app.route('/bandit1Conclusion/')
 def bandit1Conclusion():
     return render_template('bandit1Conclusion.html')
 
-@app.route('bandit2')
+@app.route('/bandit2/')
 def bandit2():
     return render_template('bandit2.html')
 
-@app.route('bandit2Def')
+@app.route('/bandit2Def/')
 def bandit2Def():
     return render_template('bandit2Def.html')
 
-@app.route('finalBoss1')
+@app.route('/finalBoss1/')
 def finalBoss1():
     return render_template('finalBoss1.html')
 
-@app.route('finalBossDef')
+@app.route('/finalBossDef/')
 def finalBossDef():
     return render_template('finalBossDef.html')
   
-@app.route('finishIt')
+@app.route('/finishIt/')
 def finishIt():
     return render_template('finishIt.html')
 
-@app.route('winPage')
+@app.route('/winPage/')
 def winPage():
     return render_template('winPage.html')
 
