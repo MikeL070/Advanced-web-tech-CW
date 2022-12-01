@@ -107,6 +107,9 @@ def finishIt():
 def winPage():
     return render_template('winPage.html')
 
+@app.route('/bandit2Attack/')
+def bandit2Attack():
+    return render_template('bandit2Attack.html')
 
 
 if __name__ == "__main__":
