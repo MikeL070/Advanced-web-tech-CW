@@ -67,7 +67,6 @@ def blacksmith():
 @app.route('/forrestSearch/')
 =======
 @app.route('forestSearch')
->>>>>>> de2d1a4f02e817d82c5d834527e623e6c5650a30
 def forrestSearch():
     return render_template('forrestSearch.html')
 
