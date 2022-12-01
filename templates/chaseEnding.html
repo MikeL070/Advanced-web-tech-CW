@@ -1,12 +1,12 @@
 <!DOCTYPE  html>
 <html>
 <head>
-	<link rel="stylesheet" href="font.css" type="text/css">
-	<link rel="stylesheet" href="genericPage.css">
+	<link rel="stylesheet" href={{ url_for('static', filename='css/font.css') }}" type="text/css">
+	<link  href="{{ url_for('static', filename='css/genericPage.css') }}"rel="stylesheet"/>
 	<meta  charset="UTF -8">
-	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
-	<script src="silverHpFunctions.js"></script>
-	<script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
+	<script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/jQuery.js') }}"></script>
+	<script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/pageStyling.js') }}"></script>
+	<script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/silverHpFunctions.js.js') }}"></script>
 
   <h2 id="locationTitle">A Bad Idea</h2>
   
@@ -14,7 +14,7 @@
 <body>
 
 	<div class="storyBox">
-	<img id="picture"img src="chasedThem.jpg"></img>
+	<img id="picture"img src={{url_for('static', filename='img/chasedThem.jpg')}}></img>
 
 		<div style="font-size:26px;" class="storyText">
 			<p>
