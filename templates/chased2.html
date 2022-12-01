@@ -1,10 +1,10 @@
 <!DOCTYPE  html>
 <html>
 <head>
-	<link rel="stylesheet" href="font.css" type="text/css">
-	<link rel="stylesheet" href="genericPage.css">
+	<link rel="stylesheet" href={{ url_for('static', filename='css/font.css') }}" type="text/css">
+	<link  href="{{ url_for('static', filename='css/genericPage.css') }}"rel="stylesheet"/>
 	
-	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
+	<script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/pageStyling.js') }}"></script>
 
 
   <h2 id="locationTitle">A Bad Idea</h2>
@@ -13,7 +13,7 @@
 <body>
 
 	<div class="storyBox">
-		<img id="picture"img src="chasedThem.jpg"></img>
+		<img id="picture"img src={{url_for('static', filename='img/chasedThem.jpg')}}></img>
 
 			<div style="font-size:20px;" class="storyText">
 				<p id='changeMe'>
@@ -27,8 +27,8 @@
 			</div>
 		
     <ul class="optionsCont">
-      <li><a href="chaseEnding.html" >Try to fight them</a></li>
-      <li><a href="chaseEnding.html">Just give up</a></li>
+      <li><a href="/chaseEnding/" >Try to fight them</a></li>
+      <li><a href="/chaseEnding/">Just give up</a></li>
 
 	  </div>
 	  				
