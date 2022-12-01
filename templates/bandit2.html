@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" href="font.css" type="text/css">
-	<link rel="stylesheet" href="genericPage.css">
+	<link  href="{{ url_for('static', filename='css/genericPage.css') }}"rel="stylesheet"/>
 	<script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/jQuery.js') }}"></script>
 	<script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/pageStyling.js') }}"></script>
 	<script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/silverHpFunctions.js.js') }}"></script>
