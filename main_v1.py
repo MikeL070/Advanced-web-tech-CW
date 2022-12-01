@@ -65,7 +65,7 @@ def blacksmith():
 
 @app.route('/forestSearch/')
 def forrestSearch():
-    return render_template('forrestSearch.html')
+    return render_template('forestSearch.html')
 
 @app.route('/bandit1NoKnow/')
 def bandit1NoKnow():
