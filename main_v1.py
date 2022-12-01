@@ -63,7 +63,7 @@ def tavern():
 def blacksmith():
     return render_template('blacksmith.html')
 
-@app.route('forestSearch')
+@app.route('/forestSearch/')
 def forrestSearch():
     return render_template('forrestSearch.html')
 
