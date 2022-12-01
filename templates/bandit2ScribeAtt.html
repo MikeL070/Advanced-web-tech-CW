@@ -2,16 +2,16 @@
 <html>
 <head>
 	<link rel="stylesheet" href="font.css" type="text/css">
-	<link rel="stylesheet" href="genericPage.css">
-	<script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
-	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
-	<script language="JavaScript" type="text/javascript" src="silverHpFunctions.js"></script>
+	<link  href="{{ url_for('static', filename='css/genericPage.css') }}"rel="stylesheet"/>
+	<script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/jQuery.js') }}"></script>
+	<script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/pageStyling.js') }}"></script>
+	<script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/silverHpFunctions.js.js') }}"></script>
 
 	<h2 id="locationTitle">Attack the Bandits</h2>
 </head>
 <body>
 	<div class="storyBox">
-			<img id="picture"img src="twoBandits.jpg"></img>
+			<img id="picture"img src={{url_for('static', filename='img/twoBandits.jpg')}}></img>
 
 			<div class="storyText">
 				<p id="story1">
@@ -35,8 +35,8 @@
 				
 			</div>
 			<ul class="optionsCont">
-				<li><a href="finalBoss1.html"></a>Face the bandit Leader</li>
-				<li><a href="runAway.html">Run away</a></li>
+				<li><a href="/finalBoss1/"></a>Face the bandit Leader</li>
+				<li><a href="/runAway/">Run away</a></li>
 				
 				
 	</div>	
@@ -56,7 +56,7 @@
 		
 		if(name=='scribe')
 		{
-			document.getElementById('knowLocation').href="bandit1.html";
+			document.getElementById('knowLocation').href="/bandit1/";
 			
 		}	
 
