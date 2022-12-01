@@ -2,21 +2,32 @@
 <html>
 <head>
 	<link rel="stylesheet" href="font.css" type="text/css">
-	<link rel="stylesheet" href="genericPage.css">
+	<link  href="{{ url_for('static', filename='css/genericPage.css') }}"rel="stylesheet"/>	
 	<meta  charset="UTF -8" />
 	<script language="JavaScript" type="text/javascript" src="jQuery.js"></script>
-	<script language="JavaScript" type="text/javascript" src="pageStyling.js"></script>
-	<script src="silverHpFunctions.js"></script>
+	<script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/pageStyling.js') }}"></script>
+	<script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/silverHpFunctions.js.js') }}"></script>
 	<h2 id="locationTitle">Tavern</h2>
-	<script>
-
-
-	</script>
+	<style>
+@font-face
+{
+  font-family: MedievalSharp;
+  src:url("{{ url_for('static', filename='MedievalSharp-Book.woff')}}");
+  font-weight: normal;
+  font-style: normal;
+}
+head{
+        font-family: MedievalSharp;
+	}
+body{
+        font-family: MedievalSharp;
+	}
+</style>
 </head>
 <body>
 
 	<div class="storyBox">
-		<img id="picture"img src="tavern.jpg"></img>
+		<img id="picture"img src={{url_for('static', filename='img/tavern.jpg')}}></img>
 
 			<div class="storyText">
 				<p>As you enter the tavern you are greeted by a musty smell 
@@ -34,7 +45,7 @@
 		
     <ul class="optionsCont">
       <li><a href="#"onclick="reduceSilver(30, 'knowledge');">Offer silver to any man who can tell you the information you seek(30 Silver)</a></li>
-   	  <li><a href="village.html">Return to the village</a></li>
+   	  <li><a href="/village/">Return to the village</a></li>
       <li><a id="classChoice" href="#" onclick="tavHaggle();">This is an option to do stuff</a></li>
 	  </div>
 </body>

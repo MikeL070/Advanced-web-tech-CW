@@ -95,7 +95,7 @@ function reduceSilver(amount, reason)
 			}
 		}
 	}
-	else
+	else if(reason=='knowledge')
 	{	
 		if(knowStatus=='yes')
 		{

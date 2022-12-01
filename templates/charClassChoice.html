@@ -4,8 +4,13 @@
   <link href="{{ url_for('static', filename='css/charClassChoice.css') }} " rel="stylesheet" />
   <link rel="stylesheet" href="charClassChoice.css" type="text/css">
   <script src="cw.js"></script>
-	<script> sessionStorage.setItem('test', 'HI');
+	<script>
+	sessionStorage.setItem('silver', Number(100));
+	sessionStorage.setItem('armour', 'no');
+	sessionStorage.setItem('training', 'no');
+	sessionStorage.setItem('weapon', 'no');
 	</script>
+
 <style>
 @font-face
 {
@@ -34,8 +39,8 @@ body{
 <body>
   <div class="charChoices">
     <div class="scribeChoice">
-	<p> <a href="/storyIntro/" id="charPicsS" onclick="sessionStorage.setItem('hi', 'hi');"> <img src="{{ url_for('static', filename='img/scribeChar.jpg') }}" width=162, height=346 /></a></p>
-      <a href="/storyIntro/" id="scribeTitle"onclick="storeScribe();">The Scribe</a>
+	<p> <a href="/storyIntro/" id="charPicsS" onclick="sessionStorage.setItem('name', 'scribe');sessionStorage.setItem('hitPoints',Number(30));sessionStorage.setItem('knowledge', 'yes');"> <img src="{{ url_for('static', filename='img/scribeChar.jpg') }}" width=162, height=346 /></a></p>
+      <a href="/storyIntro/" id="scribeTitle"onclick="sessionStorage.setItem('name', 'scribe');sessionStorage.setItem('hitPoints', Number(30));sessionStorage.setItem('knowledge', 'yes');">The Scribe</a>
       <p id="scribeText">A character that relies on intelligence and wit.</p>
 	<script>
 	 var sPic = document.getElementById('charPicsS');
@@ -45,14 +50,14 @@ sPic.addEventListener("click", sessionStorage.setItem('hello', 'hi);
     </div>
 
     <div class="knightChoice">
-      <a href="/storyIntroKnight/" id="charPics" onclick="storeKnight();"> <img src="{{ url_for('static', filename='img/knightChar.jpg') }}" width=162, height=346 /></a>
-      <p><a href="/storyIntroKnight/" id="knightTitle" onclick="storeKnight();">The Knight</a></p>
+      <a href="/storyIntro/" id="charPics" onclick="sessionStorage.setItem('name', 'knight');sessionStorage.setItem('hitPoints',Number(50));sessionStorage.setItem('knowledge', 'no');"> <img src="{{ url_for('static', filename='img/knightChar.jpg') }}" width=162, height=346 /></a>
+      <p><a href="/storyIntro/" id="knightTitle" onclick="sessionStorage.setItem('name', 'knight');sessionStorage.setItem('hitPoints',Number(50));sessionStorage.setItem('knowledge', 'no');">The Knight</a></p>
       <p id="scribeText">A character that relies on his chivalry and skill.</p>
     </div>
 
     <div class="bruteChoice">
-	    <a href="/storyIntro/" id="charPics" onclick="storeBrute();"> <img src="{{ url_for('static', filename='img/bruteChar.jpg') }}" width=162, height=346 /></a>
-      <p><a href="/storyIntro/" id="bruteTitle" onclick="storeBrute();">The Brute</a></p>
+	    <a href="/storyIntro/" id="charPics" onclick="sessionStorage.setItem('name', 'brute');sessionStorage.setItem('hitPoints',Number(50));sessionStorage.setItem('knowledge', 'no');"> <img src="{{ url_for('static', filename='img/bruteChar.jpg') }}" width=162, height=346 /></a>
+	    <p><a href="/storyIntro/" id="bruteTitle" onclick="sessionStorage.setItem('name', 'brute');sessionStorage.setItem('hitPoints',Number(50));sessionStorage.setItem('knowledge', 'no');">The Brute</a></p>
       <p id="scribeText">A character that relies on strength and force.</p>
     </div>
 
@@ -82,9 +87,7 @@ function storeKnight(){
 	  sessionStorage.setItem('name', 'knight');
   sessionStorage.setItem('hitPoints', Number(50));
  sessionStorage.setItem('knowledge', 'no');
-  document.cookie='name=knight';
-  document.cookie='hitpoints=50;
-  document.cookie='knowledge=no';
+  sessionStorage.setItem('test', 'hi');
 
 }
 function storeBrute(){
