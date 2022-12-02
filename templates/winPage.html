@@ -4,6 +4,21 @@
 	<link rel="stylesheet" href="font.css" type="text/css">
 	<link rel="stylesheet" href={{ url_for('static', filename='css/endings.css') }}" type="text/css">
 	<meta  charset="UTF -8" />
+<style>
+@font-face
+{
+  font-family: MedievalSharp;
+  src:url("{{ url_for('static', filename='MedievalSharp-Book.woff')}}");
+  font-weight: normal;
+  font-style: normal;
+}
+head{
+        font-family: MedievalSharp;
+	}
+body{
+        font-family: MedievalSharp;
+	}
+</style>			       
 
   <h2 style="color: gold;"id="locationTitle">Justice and Victory</h2>
   <script>
@@ -13,8 +28,8 @@
 </head>
 <body>
 
-	<div style ="background-image:url({{url_for('static', filename='img/backup.jpg')}})" class="storyBox">
-		
+	<div style ="class="storyBox">
+		<img id="picture"img src={{url_for('static', filename='img/backup.jpg')}}></img>
 				<p id='congrats'>Congratulations you have completed the game.</p>
 				<p  style="font-size: 28px;" class="storyText">
 					You have won! The motherless curs that wronged you lay dead at your feet.
