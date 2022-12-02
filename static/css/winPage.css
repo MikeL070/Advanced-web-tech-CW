@@ -19,15 +19,12 @@ h2
 
 .storyBox
   {
-    
-    flex:flow;
+    display: flex;
+    flex-flow: column;
     margin:auto;
     height: 600px;
     width: 800px;
-    border-style: groove;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	text-align: center;
+    border-style: double;
 	
   }
 
