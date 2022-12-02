@@ -6,6 +6,21 @@
 	<meta  charset="UTF -8" />
 	<script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/jQuery.js') }}"></script>
 	<script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/pageStyling.js') }}"></script>
+<style>
+@font-face
+{
+  font-family: MedievalSharp;
+  src:url("{{ url_for('static', filename='MedievalSharp-Book.woff')}}");
+  font-weight: normal;
+  font-style: normal;
+}
+head{
+        font-family: MedievalSharp;
+	}
+body{
+        font-family: MedievalSharp;
+	}
+</style>															
 
 	<h2 id="locationTitle">Outside The Bandit Lair</h2>
 </head>
