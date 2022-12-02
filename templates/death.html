@@ -5,6 +5,21 @@
 <link  href="{{ url_for('static', filename='css/ending.css') }}"rel="stylesheet"/>
 	<meta  charset="UTF -8">
 	<script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/pageStyling.js') }}"></script>
+<style>
+@font-face
+{
+  font-family: MedievalSharp;
+  src:url("{{ url_for('static', filename='MedievalSharp-Book.woff')}}");
+  font-weight: normal;
+  font-style: normal;
+}
+head{
+        font-family: MedievalSharp;
+	}
+body{
+        font-family: MedievalSharp;
+	}
+</style>															
 
   <h2 style="color: red;" id="locationTitle">Death and Dishonour</h2>
   <script>
